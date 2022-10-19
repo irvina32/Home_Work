@@ -1,20 +1,27 @@
-﻿Console.Write("введите первое число: ");
-int n1 = int.Parse(Console.ReadLine());
+﻿//Console.WriteLine("Введите число: , , ");
 
-Console.Write("введите второе число: ");
-int n2 = int.Parse(Console.ReadLine());
-if (n1 > n2)
+int a=1;
+int b=3;
+int c=7;
+
+int max = a;
+
+
+//int numA = int.Parse(Console.ReadLine());
+
+if (a > b) max = a;
+
+else
 {
-    Console.WriteLine ("Первое число больше второго");
+    if (b > a) max = b;
 }
 
-    else 
-    if (n1 < n2)
-    {
-       
-       Console.WriteLine ("Первое число меньше второго"); 
-    }
-    else
-    {
-        Console.WriteLine ("Оба числа равны");
-    }
+if (a > c) max = a;
+
+else
+{
+    if (c > a) max = c;
+}
+
+Console.Write("max= ");
+Console.WriteLine(max);
