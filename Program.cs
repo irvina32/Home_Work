@@ -1,27 +1,30 @@
-﻿//Console.WriteLine("Введите число: , , ");
+﻿
 
-int a=1;
-int b=3;
-int c=7;
+Console.Write("введите число: ");
 
-int max = a;
+int n = int.Parse(Console.ReadLine());
+//int a[n];
+//n = Console.Read;
+
+if (n % 2==0) 
+    {
+    
+    Console.WriteLine("да");
+
+    }
+
+    else
+
+    { 
+        Console.WriteLine("нет");
+    }
+//int n = ("четное");
+
+//else
+//{
+    // int n = ("нечетное");
+    //Console.WriteLine(n);
+//}
 
 
-//int numA = int.Parse(Console.ReadLine());
 
-if (a > b) max = a;
-
-else
-{
-    if (b > a) max = b;
-}
-
-if (a > c) max = a;
-
-else
-{
-    if (c > a) max = c;
-}
-
-Console.Write("max= ");
-Console.WriteLine(max);
