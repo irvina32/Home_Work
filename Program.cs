@@ -1,61 +1,61 @@
-﻿// Напишите программу, которая принимает на вход пятизначное 
-// число и проверяет, является ли оно палиндромом.
+﻿// Задача 28. Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
 
-Console.WriteLine("введите  число");
-string num = Console.ReadLine();
-string rev = string.Concat(num.Reverse());
+// void PrintMassiv()
+// {
+// int[] N = new int[8];
+// Console.Write("Массив [");
+// for (int i = 0; i < N.Length; i++)
+// {
+// N[i] = new Random().Next(0,99);
+// Console.Write($"{N[i]} ");
+// }
+// Console.Write("]");
+// }
+// PrintMassiv();
 
-if (num == rev){
 
-Console.WriteLine( "Число палиндром");}
 
-else
+// Задача 25.  Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+
+// Console.Write("Введите число A: ");
+// int numberA = int.Parse(Console.ReadLine());
+
+// Console.Write("Введите число B: ");
+// int numberB = int.Parse(Console.ReadLine());
+
+
+// Console.WriteLine($"результат равен: {Math.Pow(numberA,numberB)}");
+
+
+
+
+
+
+
+
+// Задача 27.  Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+
+int number = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Сумма цифр = " + GetLength(number));
+
+
+int GetLength(int number)
 {
-    Console.WriteLine("Число не палиндром");
+
+int sum = 0;
+int result = 0;
+
+for(int i = 0; i <= number; i++)
+{
+    sum = number -  number % 10;
+    result = result + (number - sum);
+    number = number / 10;
 }
 
+return result;
 
-// Напишите программу, которая принимает на вход координаты двух точек 
-// и находит расстояние между ними в 3D пространстве.
-
-
-// System.Console.WriteLine("Ввод координат точки 1: ");
-// int x1 = int.Parse(Console.ReadLine());
-// int y1 = int.Parse(Console.ReadLine());
-// int z1 = int.Parse(Console.ReadLine());
-// // int [] array1 = new int[] {x1,y1,z1};
-
-// System.Console.WriteLine("Ввод координат точки 2:  ");
-// int x2 = int.Parse(Console.ReadLine());
-// int y2 = int.Parse(Console.ReadLine());
-// int z2 = int.Parse(Console.ReadLine());
-// // int [] array2 = new int[] {x2,y2,z2};
-
-
-// double result = Math.Sqrt(Math.Pow (x1 - x2,2) + 
-//                 Math.Pow (y1 - y2,2) + 
-//                 Math.Pow (z1 - z2,2) );
-
-// System.Console.WriteLine($"Result is {result}");
-
-
-
-
-// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
-
-// Console.Write("ВВедите число: ");
-
-// int n = int.Parse(Console.ReadLine());
-
-
-// for (int i = 1; i <= n; i++)
-
-// {
-//     Console.WriteLine(Math.Pow(i,3));
-// }
-
-
-
-
+}
+int sumN = GetLength(number);
 
 
