@@ -1,60 +1,61 @@
-﻿// Напишите программу, которая принимает на вход 
-// трёхзначное число и на выходе показывает вторую цифру этого числа.
+﻿// Напишите программу, которая принимает на вход пятизначное 
+// число и проверяет, является ли оно палиндромом.
 
-Console.WriteLine("Введите число");
+Console.WriteLine("введите  число");
+string num = Console.ReadLine();
+string rev = string.Concat(num.Reverse());
 
-int number = int.Parse(Console.ReadLine());
+if (num == rev){
 
-//Console.WriteLine(number);
+Console.WriteLine( "Число палиндром");}
 
-
-int firstNumber = 0;
-//int secondNumder = 0;
-
-
-firstNumber = number / 10;
-
-Console.Write(firstNumber % 10);
+else
+{
+    Console.WriteLine("Число не палиндром");
+}
 
 
+// Напишите программу, которая принимает на вход координаты двух точек 
+// и находит расстояние между ними в 3D пространстве.
 
-// Задача 13: Напишите программу, которая выводит третью цифру
-// заданного числа или сообщает, что третьей цифры нет.
 
-// Console.WriteLine("Введите число: ");
+// System.Console.WriteLine("Ввод координат точки 1: ");
+// int x1 = int.Parse(Console.ReadLine());
+// int y1 = int.Parse(Console.ReadLine());
+// int z1 = int.Parse(Console.ReadLine());
+// // int [] array1 = new int[] {x1,y1,z1};
+
+// System.Console.WriteLine("Ввод координат точки 2:  ");
+// int x2 = int.Parse(Console.ReadLine());
+// int y2 = int.Parse(Console.ReadLine());
+// int z2 = int.Parse(Console.ReadLine());
+// // int [] array2 = new int[] {x2,y2,z2};
+
+
+// double result = Math.Sqrt(Math.Pow (x1 - x2,2) + 
+//                 Math.Pow (y1 - y2,2) + 
+//                 Math.Pow (z1 - z2,2) );
+
+// System.Console.WriteLine($"Result is {result}");
+
+
+
+
+// Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+// Console.Write("ВВедите число: ");
+
 // int n = int.Parse(Console.ReadLine());
-// //Console.WriteLine(n);
 
-// if(n <= 99)
-// {   
-//     Console.WriteLine("третьей цифры нет");   
-// }
 
-//     if (n > 101 && n < 999){
+// for (int i = 1; i <= n; i++)
 
-//     Console.WriteLine(n % 10);
-// }
-
-// if (n == 100 || n == 1000){
-
-//     Console.WriteLine(n % 10);
+// {
+//     Console.WriteLine(Math.Pow(i,3));
 // }
 
 
 
-//  Напишите программу, которая принимает на вход цифру,
-//  обозначающую день недели, и проверяет, является ли этот день выходным.
-
-// Console.Write("Введи цифру дня недели: ");
-// int dayNumber = Convert.ToInt32(Console.ReadLine());
 
 
-// void CheckingTheDayOfTheWeek (int dayNumber) {
-//   if (dayNumber == 6 || dayNumber == 7) 
-//   Console.WriteLine("этот день выходной");
-  
-//   else Console.WriteLine("этот день не выходной");
-// }
-
-// CheckingTheDayOfTheWeek(dayNumber);
 
