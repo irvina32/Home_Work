@@ -1,122 +1,88 @@
-﻿// // Задача 34: Задайте массив заполненный случайными положительными трёхзначными числами.
-// // Напишите программу, которая покажет количество чётных чисел в массиве.
-// //[345, 897, 568, 234] -> 2
+﻿// Задача 41: Пользователь вводит с клавиатуры M чисел. 
+// Посчитайте, сколько чисел больше 0 ввёл пользователь.
 
 
 
-int[] CreateArray(int size, int Min, int max)
- { int[] array = new int[size];
- Random rnd = new Random();
-for (int i = 0; i < size; i++)
- { array[i] = rnd.Next(Min, max);
-}
-return array;
-}
-
-int EvenNumber(int[] array)
-{
-    int count = 0;
-    for ( int i =0; i < array.Length; i++)
-     {
-        if (array[i] % 2 == 0) count++;
-     }
-     return count;
-}
-
-string GetArray(int[] array)
-{
-    string count = string.Empty;
-    for (int i = 0; i < array.Length; i++)
-    {
-        count = count + $"{array[i]}, ";
-    }
-    return count;
-}
-int[] array  = CreateArray(10, 100, 1000);
-
-System.Console.WriteLine(GetArray(array));
-System.Console.WriteLine(EvenNumber(array));
+// Console.Write("Введите числа через запятую: ");
+// int[] numbers = StringToNum(Console.ReadLine());
+// PrintArray(numbers);
+// int sum = 0;
+// for (int i = 0; i < numbers.Length; i++)
+// {
+//     if (numbers[i] > 0)
+//     {
+//         sum++;
+//     }
+// }
+// Console.WriteLine();
+// Console.WriteLine($"количество значений больше 0 = {sum}");
 
 
+// int[] StringToNum(string input)
+// {
+//     int count = 1;
+//     for (int i = 0; i < input.Length; i++)
+//     {
+//         if (input[i] == ',')
+//         {
+//             count++;
+//         }
+//     }
 
-//Задача 36: Задайте одномерный массив, заполненный случайными числами. 
-//Найдите сумму элементов, стоящих на нечётных позициях.
+//     int[] numbers = new int [count];
+//     int index = 0;
 
-int[] CreateArray(int size, int Min, int max)
- { int[] array = new int[size];
- Random rnd = new Random();
-for (int i = 0; i < array.Length; i++)
- { array[i] = rnd.Next(Min, max);
-}
-return array;
-}
+//     for (int i = 0; i < input.Length; i++)
+//     {
+//         string temp = "";
 
-int[] SumOddNumber(int[] array){
-int sum = 0;
-for (int i =0; i < array.Length; i++)
-{
-    if (array[i] % 2 != 0) sum = sum + array[i];
- }  
-  return array;
-}
+//         while (input [i] != ',')
+//         {
+//         if(i != input.Length - 1)
+//         {
+//             temp += input [i].ToString();
+//             i++;
+//         }
+//         else
+//         {
+//             temp += input [i].ToString();
+//             break;
+//         }
+//         }
+//         numbers[index] = Convert.ToInt32(temp);
+//         index++;
+//     }
+//     return numbers;
+// }
 
-string GetArray(int[] array)
-{
-    string sum = string.Empty;
-    for (int i = 0; i < array.Length; i++)
-    {
-        sum = sum + $"{array[i]}, ";
-    }
-    return sum;
-}
-int[] array  = CreateArray(4, 1, 10);
+
+// void PrintArray(int[] array)
+// {
+//     Console.Write("[ ");
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         Console.Write(array[i] + " ");
+//     }
+//     Console.Write("]");
+// }
 
 
 
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух 
+// прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения
+//  b1, k1, b2 и k2 задаются пользователем.
 
+Console.WriteLine("введите значение b1");
+double b1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите число k1");
+double k1 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите значение b2");
+double b2 = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("введите число k2");
+double k2 = Convert.ToInt32(Console.ReadLine());
 
-// Задача 38: Задайте массив вещественных чисел. Найдите разницу 
-// между максимальным и минимальным элементов массива.
+double x = (-b2 + b1)/(-k1 + k2);
+double y = k2 * x + b2;
 
-int[] CreateArray(int size, int Min, int max)
- { int[] array = new int[size];
- Random rnd = new Random();
-for (int i = 0; i < array.Length; i++)
- { array[i] = rnd.Next(Min, max);
-}
-return  array;
-}
-
-double DifElements(int[] array){
-
-double MinElement = array[0];
-double MaxElement = array[0];
- for (int i = 0; i < array.Length; i++)
- {
-    if (array[i] < MinElement) 
-    {                
-         MinElement = array[i];}
-     
-     if (array[i] > MaxElement)
-    {
-         MaxElement = array[i];}
-    }
-   double dif = MaxElement - MinElement;
-
-  return dif;  
-}
-string GetArray(int[] array)
-{
-    string dif = string.Empty;
-    for (int i = 0; i < array.Length; i++)
-    {
-        dif = dif + $"{array[i]}, ";
-    }
-    return dif;
-}
-
-int[] array  = CreateArray(5, 1, 30);
-Console.WriteLine(GetArray(array));
-Console.WriteLine("Разница между минимальным и максимальным элементом массива = " + DifElements(array));
-
+Console.WriteLine($"две прямые пересекутся в точке с координатами X: {x}, Y: {y}");
 
